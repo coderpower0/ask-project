@@ -1,1 +1,3 @@
-# school-project2
+# ask project
+
+repository for my school project
