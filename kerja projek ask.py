@@ -2,23 +2,24 @@
 # TODO: add algorithm that calculate interest rate
 # TODO: add algorithm that calculate monthly payment
 
-
-mode = int(input("sila masukkan 1 untuk mengira kadar peratus 2 untuk mengira kadar faedah \n3 untuk mengira ansuran bulanan: "))
 price = float(input("sila masukkan harga kereta: "))
-interest = float(input("sila masukkan kadar faedah: "))
+interest_rate = float(input("sila masukkan kadar faedah: "))
 year = float(input("sila masukkan tempoh pembayaran: "))
 
-interest = interest / 100
-year = year * 12
+interest_rate = interest_rate / 100
+month = year * 12
 
 
-def mode(mode):
+def main():
+    mode = int(input(
+        "sila masukkan 1 untuk mengira kadar peratus 2 untuk mengira kadar faedah \n3 untuk mengira ansuran bulanan: "))
+
     if mode == 1:
-        pass
+        percent_rate()
     elif mode == 2:
-        pass
+        print(interest())
     elif mode == 3:
-        pass
+        print(format(monthly_payment(), '.2f'))
     else:
         pass
 
@@ -27,14 +28,16 @@ def percent_rate():
     pass
 
 
-def interest_rate():
-    pass
+def interest():
+    interest = price * interest_rate * year
+    return interest
 
 
 def monthly_payment():
-    interest_rate = (price * interest * (year / 12) + price)
-    interest_rate = interest_rate / year
-    return interest_rate
+    monthly_payment = (price * interest_rate * year + price)
+    monthly_payment = monthly_payment / month
+    return monthly_payment
 
 
-print(format(monthly_payment(), ".2f"))
+main()
+pass
