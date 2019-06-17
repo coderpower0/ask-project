@@ -15,9 +15,9 @@ def main():
         "sila masukkan 1 untuk mengira kadar peratus 2 untuk mengira kadar faedah \n3 untuk mengira ansuran bulanan: "))
 
     if mode == 1:
-        percent_rate()
+        print(format(percent_rate(), '.2f'))
     elif mode == 2:
-        print(interest())
+        print(format(interest(), '.2f'))
     elif mode == 3:
         print(format(monthly_payment(), '.2f'))
     else:
