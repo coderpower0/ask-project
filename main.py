@@ -15,7 +15,6 @@ def monthly_payment(loan, interest_rate, year):
 
     return monthly_payment
 
-
 try:
     monthly = monthly_payment(loan, interest_rate, year)
 except NameError:
