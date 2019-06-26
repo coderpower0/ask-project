@@ -1,22 +1,22 @@
 try:
-    loan = float(input("sila masukkan jumlah pinjaman yang diambil: "))
+    principal = float(input("sila masukkan jumlah pinjaman yang diambil: "))
     interest_rate = float(input("sila masukan kadar faedah: "))
-    year = float(int(input("sila masukkan tempoh bayaran balik dalam tahun: ")))
+    duration = float(int(input("sila masukkan tempoh bayaran balik dalam tahun: ")))
 except ValueError:
     print("oops... that's not a valid number")
 
 
-def monthly_payment(loan, interest_rate, year):
-    month = year * 12
+def monthly_payment(principal, interest_rate, duration):
+    month = duration * 12
     interest_rate = interest_rate / 100
-    interest = interest_rate * loan * year
-    loan = interest + loan
-    monthly_payment = loan / month
+    interest = interest_rate * principal * duration
+    principal = interest + duration
+    monthly_payment = principal / month
 
     return monthly_payment
 
 try:
-    monthly = monthly_payment(loan, interest_rate, year)
+    monthly = monthly_payment(principal, interest_rate, duration)
 except NameError:
     pass
 
