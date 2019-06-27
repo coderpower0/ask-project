@@ -10,7 +10,7 @@ def monthly_payment(principal, interest_rate, duration):
     month = duration * 12
     interest_rate = interest_rate / 100
     interest = interest_rate * principal * duration
-    principal = interest + duration
+    principal = interest + principal
     monthly_payment = principal / month
 
     return monthly_payment
