@@ -7,7 +7,10 @@ except ValueError:
 
 
 def monthly_payment(principal, interest_rate, duration):
-    month = duration * 12
+    if duration >= 1:
+        month = duration * 12
+    else:
+        pass
     interest_rate = interest_rate / 100
     interest = interest_rate * principal * duration
     principal = interest + principal
