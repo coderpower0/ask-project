@@ -15,6 +15,7 @@ def monthly_payment(principal, interest_rate, duration):
     interest = interest_rate * principal * duration
     principal = interest + principal
     monthly_payment = principal / month
+    monthly_payment = float(format(monthly_payment, '.2f'))
 
     return monthly_payment
 
@@ -24,6 +25,6 @@ except NameError:
     pass
 
 try:
-    print("jumlah bayaran bulanan yang perlu anda bayar ialah:", format(monthly, '.2f'))
+    print("jumlah bayaran bulanan yang perlu anda bayar ialah:", monthly)
 except NameError:
     pass

@@ -1,8 +1,11 @@
+from main import *
 import unittest
 
 
 class TestMonthlyPayment(unittest.TestCase):
-    pass
+
+    def test_monthly_payment(self):
+        self.assertEquals(monthly_payment(50000, 3, 5), 958.33)
 
 
 if __name__ == '__main__':
